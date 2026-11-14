@@ -11,8 +11,8 @@ jobs:
   windows-exe:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
       - name: Install
@@ -32,7 +32,7 @@ jobs:
         shell: pwsh
       - name: "Source archive (GPL-3.0: the executable ships with its source)"
         run: git archive --format=zip -o "dist/size-strain-lab-demo-${{ github.ref_name }}-src.zip" HEAD
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           files: |
             dist/SizeStrainLab.exe
