@@ -4,7 +4,7 @@ message: >-
   for the method.
 title: "Size-Strain Lab: crystallite size and microstrain from X-ray line broadening"
 type: software
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-11-15
 license: GPL-3.0-or-later
 repository-code: "https://github.com/bolevin/size-strain-lab-demo"
