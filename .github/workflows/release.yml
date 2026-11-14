@@ -1,0 +1,40 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  windows-exe:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: python -m pip install -e .[build]
+      - name: Build
+        run: >
+          pyinstaller --noconfirm --onefile --windowed
+          --name SizeStrainLab
+          --icon src/sizeout_demo/data/icon.ico
+          --add-data "src/sizeout_demo/data;sizeout_demo/data"
+          --collect-data qfluentwidgets
+          src/sizeout_demo/__main__.py
+      - name: Self-test of the build
+        run: |
+          $p = Start-Process dist\SizeStrainLab.exe -ArgumentList "--selftest" -Wait -PassThru
+          if ($p.ExitCode -ne 0) { exit 1 }
+        shell: pwsh
+      - name: Source archive (GPL-3.0: the executable ships with its source)
+        run: git archive --format=zip -o "dist/size-strain-lab-demo-${{ github.ref_name }}-src.zip" HEAD
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/SizeStrainLab.exe
+            dist/size-strain-lab-demo-${{ github.ref_name }}-src.zip
+          generate_release_notes: true

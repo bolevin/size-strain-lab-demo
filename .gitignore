@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.import_linter_cache/
+.coverage
+coverage.xml
+htmlcov/
+*.spec.bak
+docs/img/_raw.png
+# working notes in Russian, not part of the public repository
+docs/STAGE0.md

@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite it as below, and cite the SizeCr package
+  for the method.
+title: "Size-Strain Lab: crystallite size and microstrain from X-ray line broadening"
+type: software
+version: 1.0.0
+date-released: 2026-11-15
+license: GPL-3.0-or-later
+repository-code: "https://github.com/bolevin/size-strain-lab-demo"
+authors:
+  - family-names: Levin
+    given-names: Boris A.
+    alias: bolevin
+  - family-names: Levin
+    given-names: Aleksandr A.
+keywords:
+  - powder diffraction
+  - line broadening
+  - crystallite size
+  - microstrain
+  - Williamson-Hall plot
+  - size-strain plot
+  - dislocation density
+references:
+  - type: software
+    title: "SizeCr program package (SizeOut)"
+    authors:
+      - family-names: Levin
+        given-names: Aleksandr A.
+    doi: 10.13140/RG.2.2.15922.89280

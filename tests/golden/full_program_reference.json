@@ -1,0 +1,1567 @@
+{
+ "reference": "SizeOut 16.01 (full program)",
+ "note": "Single precision in the full program: about seven significant digits. Its fit mode draws the Lorentz size-strain plot without cos(theta) in y, as the author's log has it; the demo uses the exact linearization, so that one fit is recorded but not compared (see docs/adr/0006).",
+ "sample_sha256": "ed33343167fb1b0c11cfccb9777cc84ef668f8c240c240517b60124fefe13570",
+ "instrument": {
+  "wavelength": 1.540598,
+  "k_size": 0.94,
+  "k_strain": 4.0
+ },
+ "fits": [
+  {
+   "technique": "WHP",
+   "profile": "Lor",
+   "a": 0.0025878729153724104,
+   "da": 0.00011434923940793561,
+   "b": 0.0009969478098284482,
+   "db": 4.293853750934388e-05,
+   "r2": 0.9889923695605692,
+   "n": 8,
+   "fallback": "",
+   "D": 55.95955276489258,
+   "dD": 2.472660779953003,
+   "es": 0.09969477355480194,
+   "des": 0.0042938534170389175
+  },
+  {
+   "technique": "WHP",
+   "profile": "Gau",
+   "a": 1.2323224826828006e-05,
+   "da": 6.009795232632115e-07,
+   "b": 2.050069606577259e-06,
+   "db": 7.372540480704241e-08,
+   "r2": 0.9922999888427682,
+   "n": 8,
+   "fallback": "",
+   "D": 41.25294876098633,
+   "dD": 1.0059127807617188,
+   "es": 0.14318063855171204,
+   "des": 0.0025745590683072805
+  },
+  {
+   "technique": "WHP",
+   "profile": "pV",
+   "a": 0.0033457959726910084,
+   "da": 9.71043599402662e-05,
+   "b": 1.3705541239504753e-06,
+   "db": 6.843932269927185e-08,
+   "r2": 0.985259209369661,
+   "n": 8,
+   "fallback": "",
+   "D": 43.28303909301758,
+   "dD": 1.2561949491500854,
+   "es": 0.11707066744565964,
+   "des": 0.002922991756349802
+  },
+  {
+   "technique": "SSP",
+   "profile": "Lor",
+   "a": 0.00723864375835281,
+   "da": 0.0015285960845633907,
+   "b": -0.008081874126766982,
+   "db": 0.01115509493485904,
+   "r2": 0.08044585619997136,
+   "n": 8,
+   "fallback": "infinite_d",
+   "D": 0.0,
+   "dD": 0.0,
+   "es": -1.0,
+   "des": -1.0
+  },
+  {
+   "technique": "SSP",
+   "profile": "Gau",
+   "a": 8.310659628921089e-06,
+   "da": 2.861215475050647e-07,
+   "b": 0.0005805387286398198,
+   "db": 1.2113479070271545e-05,
+   "r2": 0.9973944848404266,
+   "n": 8,
+   "fallback": "",
+   "D": 41.50347137451172,
+   "dD": 0.433004230260849,
+   "es": 0.1441410779953003,
+   "des": 0.002481263130903244
+  },
+  {
+   "technique": "SSP",
+   "profile": "pV",
+   "a": 5.390696673998378e-06,
+   "da": 2.1835674692675837e-07,
+   "b": 0.023289547295613996,
+   "db": 0.0003151899921490835,
+   "r2": 0.9989022663074759,
+   "n": 8,
+   "fallback": "",
+   "D": 42.93771743774414,
+   "dD": 0.5810993313789368,
+   "es": 0.1160893663764,
+   "des": 0.0023511708714067936
+  }
+ ],
+ "lines": [
+  {
+   "case": "both positive",
+   "technique": "WHP",
+   "profile": "Lor",
+   "input": {
+    "a": 0.0033458,
+    "da": 9.7e-05,
+    "b": 1.37055e-06,
+    "db": 6.8e-08
+   },
+   "solutions": [
+    {
+     "D": 43.28298568725586,
+     "dD": 1.254841685295105,
+     "es": 0.00013705500168725848,
+     "des": 6.799999937356915e-06,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "both positive",
+   "technique": "WHP",
+   "profile": "Gau",
+   "input": {
+    "a": 0.0033458,
+    "da": 9.7e-05,
+    "b": 1.37055e-06,
+    "db": 6.8e-08
+   },
+   "solutions": [
+    {
+     "D": 2.503612995147705,
+     "dD": 0.036291833966970444,
+     "es": 0.11707048863172531,
+     "des": 0.002904233057051897,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "both positive",
+   "technique": "WHP",
+   "profile": "pV",
+   "input": {
+    "a": 0.0033458,
+    "da": 9.7e-05,
+    "b": 1.37055e-06,
+    "db": 6.8e-08
+   },
+   "solutions": [
+    {
+     "D": 43.28298568725586,
+     "dD": 1.254841685295105,
+     "es": 0.11707048863172531,
+     "des": 0.002904233057051897,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "both positive",
+   "technique": "SSP",
+   "profile": "Lor",
+   "input": {
+    "a": 0.0033458,
+    "da": 9.7e-05,
+    "b": 1.37055e-06,
+    "db": 6.8e-08
+   },
+   "solutions": [
+    {
+     "D": 729634.125,
+     "dD": 36200.8828125,
+     "es": 0.16729000210762024,
+     "des": 0.00484999967738986,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "both positive",
+   "technique": "SSP",
+   "profile": "Gau",
+   "input": {
+    "a": 0.0033458,
+    "da": 9.7e-05,
+    "b": 1.37055e-06,
+    "db": 6.8e-08
+   },
+   "solutions": [
+    {
+     "D": 854.1862182617188,
+     "dD": 21.190275192260742,
+     "es": 2.8921446800231934,
+     "des": 0.04192390665411949,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "both positive",
+   "technique": "SSP",
+   "profile": "pV",
+   "input": {
+    "a": 0.0033458,
+    "da": 9.7e-05,
+    "b": 1.37055e-06,
+    "db": 6.8e-08
+   },
+   "solutions": [
+    {
+     "D": 729634.125,
+     "dD": 36200.8828125,
+     "es": 2.8921446800231934,
+     "des": 0.04192390665411949,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "author's example",
+   "technique": "WHP",
+   "profile": "Lor",
+   "input": {
+    "a": 0.000875663,
+    "da": 6.1941e-05,
+    "b": 1.095555,
+    "db": 7.21402e-09
+   },
+   "solutions": [
+    {
+     "D": 165.37893676757812,
+     "dD": 11.698263168334961,
+     "es": 109.55549621582031,
+     "des": 7.214019888124312e-07,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "author's example",
+   "technique": "WHP",
+   "profile": "Gau",
+   "input": {
+    "a": 0.000875663,
+    "da": 6.1941e-05,
+    "b": 1.095555,
+    "db": 7.21402e-09
+   },
+   "solutions": [
+    {
+     "D": 4.89382791519165,
+     "dD": 0.17308518290519714,
+     "es": 104.66876220703125,
+     "des": 3.4461189102330536e-07,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "author's example",
+   "technique": "WHP",
+   "profile": "pV",
+   "input": {
+    "a": 0.000875663,
+    "da": 6.1941e-05,
+    "b": 1.095555,
+    "db": 7.21402e-09
+   },
+   "solutions": [
+    {
+     "D": 165.37893676757812,
+     "dD": 11.698263168334961,
+     "es": 104.66876220703125,
+     "des": 3.4461189102330536e-07,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "author's example",
+   "technique": "SSP",
+   "profile": "Lor",
+   "input": {
+    "a": 0.000875663,
+    "da": 6.1941e-05,
+    "b": 1.095555,
+    "db": 7.21402e-09
+   },
+   "solutions": [
+    {
+     "D": 0.9127793908119202,
+     "dD": 6.0104778931702185e-09,
+     "es": 0.04378315061330795,
+     "des": 0.0030970498919487,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "author's example",
+   "technique": "SSP",
+   "profile": "Gau",
+   "input": {
+    "a": 0.000875663,
+    "da": 6.1941e-05,
+    "b": 1.095555,
+    "db": 7.21402e-09
+   },
+   "solutions": [
+    {
+     "D": 0.9553949236869812,
+     "dD": 3.1455464899465824e-09,
+     "es": 1.4795801639556885,
+     "des": 0.05232987552881241,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "author's example",
+   "technique": "SSP",
+   "profile": "pV",
+   "input": {
+    "a": 0.000875663,
+    "da": 6.1941e-05,
+    "b": 1.095555,
+    "db": 7.21402e-09
+   },
+   "solutions": [
+    {
+     "D": 0.9127793908119202,
+     "dD": 6.0104778931702185e-09,
+     "es": 1.4795801639556885,
+     "des": 0.05232987552881241,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "SSP-like",
+   "technique": "WHP",
+   "profile": "Lor",
+   "input": {
+    "a": 5.3907e-06,
+    "da": 2.18e-07,
+    "b": 0.0232895,
+    "db": 0.000315
+   },
+   "solutions": [
+    {
+     "D": 26864.08203125,
+     "dD": 1086.3839111328125,
+     "es": 2.3289499282836914,
+     "des": 0.03150000050663948,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "SSP-like",
+   "technique": "WHP",
+   "profile": "Gau",
+   "input": {
+    "a": 5.3907e-06,
+    "da": 2.18e-07,
+    "b": 0.0232895,
+    "db": 0.000315
+   },
+   "solutions": [
+    {
+     "D": 62.37270736694336,
+     "dD": 1.261176586151123,
+     "es": 15.260897636413574,
+     "des": 0.10320494323968887,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "SSP-like",
+   "technique": "WHP",
+   "profile": "pV",
+   "input": {
+    "a": 5.3907e-06,
+    "da": 2.18e-07,
+    "b": 0.0232895,
+    "db": 0.000315
+   },
+   "solutions": [
+    {
+     "D": 26864.08203125,
+     "dD": 1086.3839111328125,
+     "es": 15.260897636413574,
+     "des": 0.10320494323968887,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "SSP-like",
+   "technique": "SSP",
+   "profile": "Lor",
+   "input": {
+    "a": 5.3907e-06,
+    "da": 2.18e-07,
+    "b": 0.0232895,
+    "db": 0.000315
+   },
+   "solutions": [
+    {
+     "D": 42.93780517578125,
+     "dD": 0.580751359462738,
+     "es": 0.00026953499764204025,
+     "des": 1.0900000233959872e-05,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "SSP-like",
+   "technique": "SSP",
+   "profile": "Gau",
+   "input": {
+    "a": 5.3907e-06,
+    "da": 2.18e-07,
+    "b": 0.0232895,
+    "db": 0.000315
+   },
+   "solutions": [
+    {
+     "D": 6.552694320678711,
+     "dD": 0.0443139374256134,
+     "es": 0.11608940362930298,
+     "des": 0.0023473287001252174,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "SSP-like",
+   "technique": "SSP",
+   "profile": "pV",
+   "input": {
+    "a": 5.3907e-06,
+    "da": 2.18e-07,
+    "b": 0.0232895,
+    "db": 0.000315
+   },
+   "solutions": [
+    {
+     "D": 42.93780517578125,
+     "dD": 0.580751359462738,
+     "es": 0.11608940362930298,
+     "des": 0.0023473287001252174,
+     "fallback": "",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "no strain, Scherrer",
+   "technique": "WHP",
+   "profile": "Lor",
+   "input": {
+    "a": 0.0033,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07,
+    "scherrer": [
+     44.0,
+     1.5
+    ]
+   },
+   "solutions": [
+    {
+     "D": 44.0,
+     "dD": 1.5,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "no_strain",
+     "source": "Scherrer"
+    }
+   ]
+  },
+  {
+   "case": "no strain, Scherrer",
+   "technique": "WHP",
+   "profile": "Gau",
+   "input": {
+    "a": 0.0033,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07,
+    "scherrer": [
+     44.0,
+     1.5
+    ]
+   },
+   "solutions": [
+    {
+     "D": 44.0,
+     "dD": 1.5,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "no_strain",
+     "source": "Scherrer"
+    }
+   ]
+  },
+  {
+   "case": "no strain, Scherrer",
+   "technique": "WHP",
+   "profile": "pV",
+   "input": {
+    "a": 0.0033,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07,
+    "scherrer": [
+     44.0,
+     1.5
+    ]
+   },
+   "solutions": [
+    {
+     "D": 44.0,
+     "dD": 1.5,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "no_strain",
+     "source": "Scherrer"
+    }
+   ]
+  },
+  {
+   "case": "no strain, Scherrer",
+   "technique": "SSP",
+   "profile": "Lor",
+   "input": {
+    "a": 0.0033,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07,
+    "scherrer": [
+     44.0,
+     1.5
+    ]
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": -1.0,
+     "des": -1.0,
+     "fallback": "infinite_d",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "no strain, Scherrer",
+   "technique": "SSP",
+   "profile": "Gau",
+   "input": {
+    "a": 0.0033,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07,
+    "scherrer": [
+     44.0,
+     1.5
+    ]
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": -1.0,
+     "des": -1.0,
+     "fallback": "infinite_d",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "no strain, Scherrer",
+   "technique": "SSP",
+   "profile": "pV",
+   "input": {
+    "a": 0.0033,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07,
+    "scherrer": [
+     44.0,
+     1.5
+    ]
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": -1.0,
+     "des": -1.0,
+     "fallback": "infinite_d",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "no strain, two models",
+   "technique": "WHP",
+   "profile": "Lor",
+   "input": {
+    "a": 0.0033,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07,
+    "scherrer": [
+     44.0,
+     1.5
+    ],
+    "monshi": [
+     47.5,
+     2.0
+    ]
+   },
+   "solutions": [
+    {
+     "D": 44.0,
+     "dD": 1.5,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "no_strain",
+     "source": "Scherrer"
+    },
+    {
+     "D": 47.5,
+     "dD": 2.0,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "no_strain",
+     "source": "Monshi"
+    }
+   ]
+  },
+  {
+   "case": "no strain, two models",
+   "technique": "WHP",
+   "profile": "Gau",
+   "input": {
+    "a": 0.0033,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07,
+    "scherrer": [
+     44.0,
+     1.5
+    ],
+    "monshi": [
+     47.5,
+     2.0
+    ]
+   },
+   "solutions": [
+    {
+     "D": 44.0,
+     "dD": 1.5,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "no_strain",
+     "source": "Scherrer"
+    },
+    {
+     "D": 47.5,
+     "dD": 2.0,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "no_strain",
+     "source": "Monshi"
+    }
+   ]
+  },
+  {
+   "case": "no strain, two models",
+   "technique": "WHP",
+   "profile": "pV",
+   "input": {
+    "a": 0.0033,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07,
+    "scherrer": [
+     44.0,
+     1.5
+    ],
+    "monshi": [
+     47.5,
+     2.0
+    ]
+   },
+   "solutions": [
+    {
+     "D": 44.0,
+     "dD": 1.5,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "no_strain",
+     "source": "Scherrer"
+    },
+    {
+     "D": 47.5,
+     "dD": 2.0,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "no_strain",
+     "source": "Monshi"
+    }
+   ]
+  },
+  {
+   "case": "no strain, two models",
+   "technique": "SSP",
+   "profile": "Lor",
+   "input": {
+    "a": 0.0033,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07,
+    "scherrer": [
+     44.0,
+     1.5
+    ],
+    "monshi": [
+     47.5,
+     2.0
+    ]
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": -1.0,
+     "des": -1.0,
+     "fallback": "infinite_d",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "no strain, two models",
+   "technique": "SSP",
+   "profile": "Gau",
+   "input": {
+    "a": 0.0033,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07,
+    "scherrer": [
+     44.0,
+     1.5
+    ],
+    "monshi": [
+     47.5,
+     2.0
+    ]
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": -1.0,
+     "des": -1.0,
+     "fallback": "infinite_d",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "no strain, two models",
+   "technique": "SSP",
+   "profile": "pV",
+   "input": {
+    "a": 0.0033,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07,
+    "scherrer": [
+     44.0,
+     1.5
+    ],
+    "monshi": [
+     47.5,
+     2.0
+    ]
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": -1.0,
+     "des": -1.0,
+     "fallback": "infinite_d",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "infinite size, Stokes",
+   "technique": "WHP",
+   "profile": "Lor",
+   "input": {
+    "a": -0.0004,
+    "da": 0.0001,
+    "b": 1.2e-06,
+    "db": 5e-08,
+    "stokes": [
+     0.13,
+     0.01
+    ]
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": 0.12999999523162842,
+     "des": 0.009999999776482582,
+     "fallback": "infinite_d",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "infinite size, Stokes",
+   "technique": "WHP",
+   "profile": "Gau",
+   "input": {
+    "a": -0.0004,
+    "da": 0.0001,
+    "b": 1.2e-06,
+    "db": 5e-08,
+    "stokes": [
+     0.13,
+     0.01
+    ]
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": 0.12999999523162842,
+     "des": 0.009999999776482582,
+     "fallback": "infinite_d",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "infinite size, Stokes",
+   "technique": "WHP",
+   "profile": "pV",
+   "input": {
+    "a": -0.0004,
+    "da": 0.0001,
+    "b": 1.2e-06,
+    "db": 5e-08,
+    "stokes": [
+     0.13,
+     0.01
+    ]
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": 0.12999999523162842,
+     "des": 0.009999999776482582,
+     "fallback": "infinite_d",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "infinite size, Stokes",
+   "technique": "SSP",
+   "profile": "Lor",
+   "input": {
+    "a": -0.0004,
+    "da": 0.0001,
+    "b": 1.2e-06,
+    "db": 5e-08,
+    "stokes": [
+     0.13,
+     0.01
+    ]
+   },
+   "solutions": [
+    {
+     "D": -1.0,
+     "dD": -1.0,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "no_strain",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "infinite size, Stokes",
+   "technique": "SSP",
+   "profile": "Gau",
+   "input": {
+    "a": -0.0004,
+    "da": 0.0001,
+    "b": 1.2e-06,
+    "db": 5e-08,
+    "stokes": [
+     0.13,
+     0.01
+    ]
+   },
+   "solutions": [
+    {
+     "D": -1.0,
+     "dD": -1.0,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "no_strain",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "infinite size, Stokes",
+   "technique": "SSP",
+   "profile": "pV",
+   "input": {
+    "a": -0.0004,
+    "da": 0.0001,
+    "b": 1.2e-06,
+    "db": 5e-08,
+    "stokes": [
+     0.13,
+     0.01
+    ]
+   },
+   "solutions": [
+    {
+     "D": -1.0,
+     "dD": -1.0,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "no_strain",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "neither",
+   "technique": "WHP",
+   "profile": "Lor",
+   "input": {
+    "a": -0.0004,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "both",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "neither",
+   "technique": "WHP",
+   "profile": "Gau",
+   "input": {
+    "a": -0.0004,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "both",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "neither",
+   "technique": "WHP",
+   "profile": "pV",
+   "input": {
+    "a": -0.0004,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "both",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "neither",
+   "technique": "SSP",
+   "profile": "Lor",
+   "input": {
+    "a": -0.0004,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "both",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "neither",
+   "technique": "SSP",
+   "profile": "Gau",
+   "input": {
+    "a": -0.0004,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "both",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "case": "neither",
+   "technique": "SSP",
+   "profile": "pV",
+   "input": {
+    "a": -0.0004,
+    "da": 0.0001,
+    "b": -2e-07,
+    "db": 1e-07
+   },
+   "solutions": [
+    {
+     "D": 0.0,
+     "dD": 0.0,
+     "es": 0.0,
+     "des": 0.0,
+     "fallback": "both",
+     "source": ""
+    }
+   ]
+  }
+ ],
+ "dislocations": [
+  {
+   "case": "author's 16.00 table",
+   "input": {
+    "D": [
+     240.0,
+     18.0
+    ],
+    "es": [
+     0.0147487,
+     0.0026817
+    ],
+    "n": 1.0,
+    "coeff": 3,
+    "k": 12.0,
+    "b": [
+     0.384,
+     0.0
+    ],
+    "round": false
+   },
+   "b": 0.3840000033378601,
+   "db": 0.0,
+   "ldis_d": 5208333333.333333,
+   "d_ldis_d": 781250000.0,
+   "ldis_es": 177021604.74317265,
+   "d_ldis_es": 64374329.59376299,
+   "ldis": 960201814.5702622,
+   "d_ldis": 188859187.85485712,
+   "ro_total": 5385354938.076506,
+   "d_ro_total": 783897708.1294768,
+   "cf": 6.0,
+   "distribution": "anisotropic"
+  },
+  {
+   "case": "cubic Al, rounded",
+   "input": {
+    "D": [
+     43.283037,
+     1.2561948
+    ],
+    "es": [
+     0.11707067,
+     0.002923
+    ],
+    "n": 1.0,
+    "coeff": 3,
+    "k": 12.0,
+    "a": [
+     4.0495,
+     0.0005
+    ],
+    "round": true
+   },
+   "b": 0.28634288907051086,
+   "db": 3.535534051479772e-05,
+   "ldis_d": 162249864791.77933,
+   "d_ldis_d": 7546505339.152527,
+   "ldis_es": 20034980694.785934,
+   "d_ldis_es": 1027450155.1921732,
+   "ldis": 57014672750.39757,
+   "d_ldis": 1973658730.3062963,
+   "ro_total": 182284845486.56525,
+   "d_ro_total": 7616127405.398496,
+   "cf": 6.0,
+   "distribution": "anisotropic"
+  },
+  {
+   "case": "isotropic, n = 2",
+   "input": {
+    "D": [
+     120.0,
+     7.5
+    ],
+    "es": [
+     0.05,
+     0.004
+    ],
+    "n": 2.0,
+    "coeff": 1,
+    "k": 6.0,
+    "b": [
+     0.25,
+     0.002
+    ],
+    "round": false
+   },
+   "b": 0.25,
+   "db": 0.0020000000949949026,
+   "ldis_d": 13888888888.88889,
+   "d_ldis_d": 1736111111.1111112,
+   "ldis_es": 1200000000.0000002,
+   "d_ldis_es": 192957612.01626366,
+   "ldis": 4082482904.6386304,
+   "d_ldis": 415737296.98131233,
+   "ro_total": 15088888888.88889,
+   "d_ro_total": 1746801199.3808787,
+   "cf": 2.449489742783178,
+   "distribution": "isotropic"
+  },
+  {
+   "case": "infinite size",
+   "input": {
+    "D": [
+     0.0,
+     0.0
+    ],
+    "es": [
+     0.08,
+     0.005
+    ],
+    "n": 1.0,
+    "coeff": 3,
+    "k": 24.0,
+    "b": [
+     0.2863,
+     0.0
+    ],
+    "round": false
+   },
+   "b": 0.28630000352859497,
+   "db": 0.0,
+   "ldis_d": 0.0,
+   "d_ldis_d": 0.0,
+   "ldis_es": 18739090514.056995,
+   "d_ldis_es": 2342386314.2571244,
+   "ldis": 18739090514.056995,
+   "d_ldis": 2342386314.2571244,
+   "ro_total": 18739090514.056995,
+   "d_ro_total": 2342386314.2571244,
+   "cf": 0.0,
+   "distribution": "any"
+  }
+ ],
+ "estimates": [
+  {
+   "case": "D and es, pV",
+   "input": {
+    "group": "micro",
+    "first": [
+     45.0,
+     2.0
+    ],
+    "second": [
+     0.12,
+     0.01
+    ],
+    "tth": [
+     38.4735,
+     0.01
+    ],
+    "profile": "pV",
+    "round": false
+   },
+   "D": 45.0,
+   "dD": 2.0,
+   "es": 0.11999999731779099,
+   "des": 0.009999999776482582,
+   "size": 0.19528968632221222,
+   "d_size": 0.008679543621838093,
+   "strain": 0.09596984088420868,
+   "d_strain": 0.007997531443834305,
+   "corr": 0.23455621302127838,
+   "d_corr": 0.009311524219810963,
+   "b": 0.0,
+   "db": 0.0
+  },
+  {
+   "case": "D and es, Gau, rounded",
+   "input": {
+    "group": "micro",
+    "first": [
+     45.27,
+     1.94
+    ],
+    "second": [
+     0.1234,
+     0.0112
+    ],
+    "tth": [
+     82.4388,
+     0.02
+    ],
+    "profile": "Gau",
+    "round": true
+   },
+   "D": 45.0,
+   "dD": 2.0,
+   "es": 0.11999999731779099,
+   "des": 0.009999999776482582,
+   "size": 0.245131254196167,
+   "d_size": 0.010894786566495895,
+   "strain": 0.2409261018037796,
+   "d_strain": 0.020077355206012726,
+   "corr": 0.3437073230743408,
+   "d_corr": 0.01607600413262844,
+   "b": 0.0,
+   "db": 0.0
+  },
+  {
+   "case": "es only, Lor",
+   "input": {
+    "group": "micro",
+    "first": null,
+    "second": [
+     0.2,
+     0.02
+    ],
+    "tth": [
+     65.0987,
+     0.0
+    ],
+    "profile": "Lor",
+    "round": false
+   },
+   "D": 0.0,
+   "dD": 0.0,
+   "es": 0.20000000298023224,
+   "des": 0.019999999552965164,
+   "size": 0.0,
+   "d_size": 0.0,
+   "strain": 0.29256683588027954,
+   "d_strain": 0.029256682842969894,
+   "corr": 0.29256683588027954,
+   "d_corr": 0.029256682842969894,
+   "b": 0.0,
+   "db": 0.0
+  },
+  {
+   "case": "widths, pV",
+   "input": {
+    "group": "widths",
+    "first": [
+     0.18,
+     0.01
+    ],
+    "second": [
+     0.06,
+     0.005
+    ],
+    "tth": [
+     44.7221,
+     0.01
+    ],
+    "profile": "pV",
+    "round": false
+   },
+   "D": 49.8444938659668,
+   "dD": 2.769139051437378,
+   "es": 0.0636400505900383,
+   "des": 0.00530336145311594,
+   "size": 0.18000000715255737,
+   "d_size": 0.009999999776482582,
+   "strain": 0.05999999865889549,
+   "d_strain": 0.004999999888241291,
+   "corr": 0.19816654920578003,
+   "d_corr": 0.009570919908583164,
+   "b": 0.0,
+   "db": 0.0
+  },
+  {
+   "case": "widths, Lor, rounded",
+   "input": {
+    "group": "widths",
+    "first": [
+     0.21,
+     0.012
+    ],
+    "second": [
+     0.09,
+     0.006
+    ],
+    "tth": [
+     99.0842,
+     0.0
+    ],
+    "profile": "Lor",
+    "round": true
+   },
+   "D": 61.0,
+   "dD": 3.0,
+   "es": 0.032999999821186066,
+   "des": 0.0020000000949949026,
+   "size": 0.20999999344348907,
+   "d_size": 0.012000000104308128,
+   "strain": 0.09000000357627869,
+   "d_strain": 0.006000000052154064,
+   "corr": 0.30000001192092896,
+   "d_corr": 0.013416407629847527,
+   "b": 0.0,
+   "db": 0.0
+  },
+  {
+   "case": "densities",
+   "input": {
+    "group": "densities",
+    "first": [
+     150000000000.0,
+     10000000000.0
+    ],
+    "second": [
+     20000000000.0,
+     1000000000.0
+    ],
+    "tth": [
+     38.4735,
+     0.01
+    ],
+    "profile": "pV",
+    "round": false
+   },
+   "D": 44.72135925292969,
+   "dD": 1.49071204662323,
+   "es": 0.11689899861812592,
+   "des": 0.0029225104954093695,
+   "size": 0.19650645554065704,
+   "d_size": 0.006550217978656292,
+   "strain": 0.09348981827497482,
+   "d_strain": 0.0023374210577458143,
+   "corr": -1.0,
+   "d_corr": -1.0,
+   "b": 0.28634288907051086,
+   "db": 3.535534051479772e-05
+  },
+  {
+   "case": "densities, rounded",
+   "input": {
+    "group": "densities",
+    "first": [
+     162000000000.0,
+     7500000000.0
+    ],
+    "second": [
+     20000000000.0,
+     1000000000.0
+    ],
+    "tth": [
+     78.2318,
+     0.0
+    ],
+    "profile": "Gau",
+    "round": true
+   },
+   "D": 43.0,
+   "dD": 1.0,
+   "es": 0.11699999868869781,
+   "des": 0.003000000026077032,
+   "size": 0.24870334565639496,
+   "d_size": 0.005783798638731241,
+   "strain": 0.21803848445415497,
+   "d_strain": 0.005590730346739292,
+   "corr": -1.0,
+   "d_corr": -1.0,
+   "b": 0.28633999824523926,
+   "db": 3.9999998989515007e-05
+  }
+ ],
+ "rounding": {
+  "size": [
+   [
+    366.43,
+    66.51,
+    366.0,
+    67.0
+   ],
+   [
+    366.43,
+    0.51,
+    366.4,
+    0.5
+   ],
+   [
+    43.283037,
+    1.2561948,
+    43.0,
+    1.0
+   ],
+   [
+    42.937717,
+    0.5811,
+    42.9,
+    0.6
+   ],
+   [
+    240.0,
+    18.0,
+    240.0,
+    18.0
+   ],
+   [
+    12.3456,
+    0.0234,
+    12.35,
+    0.02
+   ],
+   [
+    0.9612,
+    0.0461,
+    0.96,
+    0.05
+   ]
+  ],
+  "strain": [
+   [
+    0.02653,
+    0.01154,
+    0.027,
+    0.012
+   ],
+   [
+    0.02649,
+    0.201154,
+    0.03,
+    0.2
+   ],
+   [
+    0.02649,
+    0.0001154,
+    0.0265,
+    0.0001
+   ],
+   [
+    0.11707067,
+    0.002923,
+    0.117,
+    0.003
+   ],
+   [
+    0.0147487,
+    0.0026817,
+    0.015,
+    0.003
+   ],
+   [
+    1.2345,
+    0.0,
+    1.2,
+    0.0
+   ]
+  ],
+  "burgers": [
+   [
+    0.3839943,
+    0.000106066,
+    0.384,
+    0.0001
+   ],
+   [
+    0.286343,
+    3.5355e-05,
+    0.28634,
+    4e-05
+   ],
+   [
+    0.25,
+    0.002,
+    0.25,
+    0.002
+   ]
+  ]
+ }
+}

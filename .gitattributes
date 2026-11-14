@@ -1,0 +1,4 @@
+# LF everywhere: the golden test pins the sample by its SHA-256
+* text=auto eol=lf
+*.png binary
+*.ico binary

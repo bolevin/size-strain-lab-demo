@@ -1,0 +1,149 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "size-strain-lab-demo"
+dynamic = ["version"]
+description = "Crystallite size and microstrain from X-ray line broadening: Williamson-Hall and size-strain plots, dislocation density, a broadening calculator."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+authors = [{ name = "bolevin" }, { name = "A. A. Levin" }]
+keywords = [
+  "powder diffraction", "XRD", "line broadening", "crystallite size", "microstrain",
+  "Williamson-Hall", "size-strain plot", "dislocation density",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Chemistry",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Typing :: Typed",
+]
+dependencies = [
+  "PySide6>=6.7",
+  "PySide6-Fluent-Widgets>=1.8,<2",
+  "pyqtgraph>=0.13",
+  "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "pytest-qt>=4.4",
+  "pytest-cov>=5",
+  "hypothesis>=6.100",
+  "ruff>=0.6",
+  "mypy>=1.11",
+  "import-linter>=2.1",
+  "pillow>=10",
+]
+build = ["pyinstaller>=6.6"]
+
+[project.gui-scripts]
+size-strain-lab = "sizeout_demo.main:main"
+
+[project.urls]
+Repository = "https://github.com/bolevin/size-strain-lab-demo"
+Documentation = "https://github.com/bolevin/size-strain-lab-demo/blob/main/docs/architecture.md"
+
+[tool.hatch.version]
+path = "src/sizeout_demo/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sizeout_demo"]
+
+# --- tests ------------------------------------------------------------
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+addopts = ["-ra", "--strict-markers", "--strict-config"]
+xfail_strict = true
+filterwarnings = [
+  "error",
+  "ignore::DeprecationWarning:qfluentwidgets.*",
+  "ignore::DeprecationWarning:pyqtgraph.*",
+]
+qt_api = "pyside6"
+
+[tool.coverage.run]
+source = ["sizeout_demo"]
+branch = true
+
+[tool.coverage.report]
+exclude_also = ["if TYPE_CHECKING:", "\\.\\.\\.$", "if __name__ == .__main__.:"]
+
+# --- lint and types ---------------------------------------------------
+[tool.ruff]
+line-length = 92
+src = ["src", "tests", "tools"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM", "PT", "RUF", "PL", "N"]
+ignore = [
+  "PLR2004",  # numbers in tests and physics are not "magic"
+  "PLR0913",  # value objects take many fields
+  "PLC0415",  # Qt is imported late on purpose: --selftest needs no display
+  "N818",     # domain errors are named as conditions: InvalidInput, InsufficientData
+  "RUF001",   # Greek letters and the plus-minus sign are meant
+  "RUF002",
+  "RUF003",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tools/*" = ["PLR0912", "PLR0915"]
+"tests/*" = ["PLR0917"]    # hypothesis hands the drawn values in by position
+"src/sizeout_demo/ui/pages.py" = ["PLR0915"]     # widget construction is long by nature
+"src/sizeout_demo/ui/widgets.py" = [
+  "PLR0915",
+  "N802",     # Qt names its event handlers in camelCase
+]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src", "tests"]
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = ["pyqtgraph.*", "qfluentwidgets.*"]
+ignore_missing_imports = true
+follow_imports = "skip"
+
+[[tool.mypy.overrides]]
+# the widget base classes come from untyped libraries
+module = ["sizeout_demo.ui.main_window", "sizeout_demo.ui.pages", "sizeout_demo.ui.plot",
+          "sizeout_demo.ui.widgets", "tests.*"]
+disallow_subclassing_any = false
+
+# --- architecture -----------------------------------------------------
+[tool.importlinter]
+root_package = "sizeout_demo"
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "Dependencies point inwards: ui/adapters -> application -> domain"
+type = "layers"
+layers = [
+  "sizeout_demo.main",
+  "sizeout_demo.ui | sizeout_demo.adapters",
+  "sizeout_demo.application",
+  "sizeout_demo.domain",
+]
+
+[[tool.importlinter.contracts]]
+name = "The calculation depends on the standard library only"
+type = "forbidden"
+source_modules = ["sizeout_demo.domain", "sizeout_demo.application"]
+forbidden_modules = ["PySide6", "qfluentwidgets", "pyqtgraph", "numpy"]
+
+[[tool.importlinter.contracts]]
+name = "The presenters, the parsing and the view contract are free of Qt"
+type = "forbidden"
+source_modules = ["sizeout_demo.ui.presenters", "sizeout_demo.ui.parsing", "sizeout_demo.ui.view"]
+forbidden_modules = ["PySide6", "qfluentwidgets", "pyqtgraph"]
