@@ -219,10 +219,8 @@ A. A. Levin, *SizeCr program package*, DOI
 
 ## Authors and licence
 
-**Boris A. Levin** ([@bolevin](https://github.com/bolevin)) - design and implementation of
-this demo.
-**Aleksandr A. Levin** - the method and the original program SizeOut of the SizeCr
-package.
+[@bolevin](https://github.com/bolevin) - design and implementation of this demo.
+**A. A. Levin** - the method and the original program SizeOut of the SizeCr package.
 
 Free software under the [GNU General Public License v3.0 or later](LICENSE); the licences
 of the libraries it uses are in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). The
