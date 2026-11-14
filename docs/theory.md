@@ -8,7 +8,7 @@ tables in [architecture.md, section 10](architecture.md#10-quality-requirements)
 Symbols: $2\theta$ is the position of a reflection, $\beta$ its width (FWHM) in
 radians **after** the instrumental contribution has been removed, $\lambda$ the
 wavelength, $d = \lambda / 2\sin\theta$ the interplanar spacing, $D$ the crystallite
-size, $e$ the microstrain ($e_s = 100\,e$ in %), $K$ the Scherrer constant (0.94)
+size, $e$ the microstrain ($e_s = 100\thinspace e$ in %), $K$ the Scherrer constant (0.94)
 and $K_\varepsilon$ the strain constant (4).
 
 ## 1. Two kinds of broadening
@@ -19,7 +19,7 @@ on the angle differently:
 $$
 \beta_D = \frac{K\lambda}{D\cos\theta} \qquad\text{(Scherrer)}
 \qquad\qquad
-\beta_\varepsilon = K_\varepsilon\, e \tan\theta \qquad\text{(Stokes and Wilson)}
+\beta_\varepsilon = K_\varepsilon\thinspace  e \tan\theta \qquad\text{(Stokes and Wilson)}
 $$
 
 How the two add up depends on the shape of the profile:
@@ -70,8 +70,8 @@ s^2 = \frac{SS_{res}}{n-2},\quad
 $$
 
 and $R^2 = 1 - SS_{res}/SS_{tot}$. The e.s.d.'s of $D$ and $e$ follow by first-order
-propagation, e.g. $\sigma_D = D\,\sigma_A/A$ for $D = K\lambda/A$ and
-$\sigma_D = D\,\sigma_A/2A$ for $D = K\lambda/\sqrt{A}$.
+propagation, e.g. $\sigma_D = D\thinspace \sigma_A/A$ for $D = K\lambda/A$ and
+$\sigma_D = D\thinspace \sigma_A/2A$ for $D = K\lambda/\sqrt{A}$.
 
 Two reflections give a line but no scatter; their own e.s.d.'s are propagated
 instead:
@@ -99,12 +99,12 @@ After Williamson and Smallman (1956), in $\mathrm{cm^{-2}}$ with $D$ and $b$ in 
 $e_s$ in %:
 
 $$
-\rho_D = 10^{14}\,\frac{C\,n}{D^2},
+\rho_D = 10^{14}\thinspace \frac{C\thinspace n}{D^2},
 \qquad
-\rho_\varepsilon = 10^{10}\,\frac{k}{n}\left(\frac{e_s}{b}\right)^2,
+\rho_\varepsilon = 10^{10}\thinspace \frac{k}{n}\left(\frac{e_s}{b}\right)^2,
 \qquad
-\rho = \sqrt{\rho_D\,\rho_\varepsilon} = C_f\,\frac{e_s}{b\,D}\cdot 10^{12},
-\quad C_f = \sqrt{k\,C}
+\rho = \sqrt{\rho_D\thinspace \rho_\varepsilon} = C_f\thinspace \frac{e_s}{b\thinspace D}\cdot 10^{12},
+\quad C_f = \sqrt{k\thinspace C}
 $$
 
 $n$ - dislocations at the crystallite boundary, $C$ - 1 for an isotropic and 3 for an

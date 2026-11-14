@@ -6,7 +6,7 @@ Date: 2026-11-14 · Status: accepted
 
 For Lorentz profiles the size-strain plot is linear in
 
-$$ y = \frac{d\,\beta\cos\theta}{\lambda} = \frac1D\,(K d) + \frac{K_\varepsilon e}{2}. $$
+$$ y = \frac{d\thinspace \beta\cos\theta}{\lambda} = \frac1D\thinspace (K d) + \frac{K_\varepsilon e}{2}. $$
 
 The full program's fit mode, which places reflections on the plot itself, follows the
 convention of the log it was built from and uses $y = d\beta/\lambda$, without

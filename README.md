@@ -115,7 +115,7 @@ required; `h,k,l` and `use` are optional; comma, semicolon or tab separate the f
 A small crystallite widens a line as 1/cos θ, a strained lattice as tan θ:
 
 $$
-\beta_D = \frac{K\lambda}{D\cos\theta}, \qquad \beta_\varepsilon = K_\varepsilon\, e\tan\theta .
+\beta_D = \frac{K\lambda}{D\cos\theta}, \qquad \beta_\varepsilon = K_\varepsilon\thinspace  e\tan\theta .
 $$
 
 Each plot rearranges their sum - which depends on the profile - into a straight line
@@ -123,7 +123,7 @@ y = A + Bx, so that D comes from one coefficient and e from the other. For examp
 pseudo-Voigt Williamson-Hall plot:
 
 $$
-\beta\cos\theta = \frac{K\lambda}{D} + e^2\,\frac{(K_\varepsilon\sin\theta)^2}{\beta\cos\theta}.
+\beta\cos\theta = \frac{K\lambda}{D} + e^2\thinspace \frac{(K_\varepsilon\sin\theta)^2}{\beta\cos\theta}.
 $$
 
 All six linearizations, the uncertainties, the reference models, the densities and the

@@ -30,7 +30,7 @@ jobs:
           $p = Start-Process dist\SizeStrainLab.exe -ArgumentList "--selftest" -Wait -PassThru
           if ($p.ExitCode -ne 0) { exit 1 }
         shell: pwsh
-      - name: Source archive (GPL-3.0: the executable ships with its source)
+      - name: "Source archive (GPL-3.0: the executable ships with its source)"
         run: git archive --format=zip -o "dist/size-strain-lab-demo-${{ github.ref_name }}-src.zip" HEAD
       - uses: softprops/action-gh-release@v2
         with:
