@@ -14,5 +14,5 @@ coverage.xml
 htmlcov/
 *.spec.bak
 docs/img/_raw.png
-# working notes in Russian, not part of the public repository
+# local working notes
 docs/STAGE0.md
